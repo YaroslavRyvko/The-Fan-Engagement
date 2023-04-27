@@ -1,0 +1,76 @@
+.home-page {
+  padding: 100px 20px; }
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+button {
+  cursor: pointer; }
+
+ol,
+ul {
+  list-style: none; }
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/fc80ad19afcbea34e8dbdedb9e60bd45.ttf);
+  font-weight: 200;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/d0704eb4a339c1895bf5d7a153a25c84.ttf);
+  font-weight: 300;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/d132ed5224d61c7c2c71e44cd2750999.ttf);
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/36bd05140475db525b9617f601c201a6.ttf);
+  font-weight: 500;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/be79203f7047b78f1374f8658fe01208.ttf);
+  font-weight: 600;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/2af19b388ce4f0e3617fed61faea284e.ttf);
+  font-weight: 700;
+  font-display: swap; }
+
+.header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center; }
+
