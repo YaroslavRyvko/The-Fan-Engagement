@@ -1,0 +1,145 @@
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #011d52;
+}
+
+.logo {
+  position: fixed;
+  width: 6vw;
+  top: 2.5vw;
+  left: 2.5vw;
+  z-index: 900;
+  transition: all 0.25s ease;
+}
+
+nav {
+  position: fixed;
+  top: 2.5vw;
+  right: 2.5vw;
+  z-index: 100;
+  text-align: right;
+
+  a {
+    font-size: 1vw;
+    line-height: 1.5;
+    color: #168dff;
+    text-transform: uppercase;
+    padding: 0;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: #fff9e0;
+    }
+  }
+
+  li.active a {
+    color: #fff9e0;
+  }
+}
+
+// Sections //
+
+#hero {
+  background-image: url("../images/home_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_phone {
+  width: auto;
+  height: 40vw;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero_title {
+  font-size: 10vw;
+  font-weight: 400;
+  line-height: 0.9;
+  color: #fff9e0;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 5vw;
+  left: 10vw;
+  margin: 0;
+  padding: 0;
+
+  span {
+    display: block;
+    position: relative;
+  }
+
+  span.line2 {
+    left: 3.15vw;
+  }
+
+  span.slogan {
+    font-size: 3vw;
+    color: #168dff;
+    line-height: 1.25;
+    left: 3.25vw;
+  }
+}
+
+.hero_scroll {
+  position: absolute;
+  bottom: 1vw;
+  width: 2vw;
+  z-index: 100;
+  animation: float 4s ease-in-out infinite;
+
+  svg {
+    display: block;
+    width: 2vw;
+    cursor: pointer;
+
+    * {
+      transition: all 0.25s ease;
+    }
+
+    &:hover * {
+      fill: #fff9e0;
+    }
+  }
+}
+
+.book_a_demo {
+  position: fixed;
+  right: 2.5vw;
+  bottom: 2.5vw;
+  z-index: 1;
+
+  span {
+    display: block;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    color: #fff9e0;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff9e0;
+    transition: all 0.25s ease;
+
+    &:hover {
+      color: #168dff;
+      border-bottom: 2px solid #168dff;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

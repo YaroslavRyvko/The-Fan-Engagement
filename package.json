@@ -24,5 +24,9 @@
     "sass-loader": "~8.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "~3.3.10"
+  },
+  "dependencies": {
+    "fullpage.js": "^4.0.20",
+    "gsap": "^3.12.1"
   }
 }

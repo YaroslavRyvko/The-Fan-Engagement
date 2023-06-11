@@ -1,7 +1,12 @@
-.site-container {
+.section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+body{
+  font-family: 'Anton', sans-serif;
+  overflow-x: hidden;
+  height: 100%;
 }
