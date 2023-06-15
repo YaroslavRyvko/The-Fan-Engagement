@@ -1,8 +1,6 @@
 import '../scss/main.scss';
-import { initGsap } from './modules/gsap';
-import { initFullPage } from './modules/fullpage';
+import { initAnimations } from './modules/animations';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initGsap();
-  initFullPage();
+  initAnimations();
 })

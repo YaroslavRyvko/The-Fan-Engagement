@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "fullpage.js": "^4.0.20",
-    "gsap": "^3.12.1"
+    "gsap": "^3.12.1",
+    "split-type": "^0.3.3"
   }
 }

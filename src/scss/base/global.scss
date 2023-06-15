@@ -9,4 +9,37 @@ body{
   font-family: 'Anton', sans-serif;
   overflow-x: hidden;
   height: 100%;
+  background: #011D52;
+}
+
+
+h2 {
+  font-size: 3.5vw;
+  line-height: 1;
+  color: #FFF9E0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 12vw;
+  top: 2.5vw;
+  text-transform: uppercase;
+  z-index: 300;
+  font-weight: 400;
+
+  span{
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    background-color: #FFF9E0;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.fp-watermark{
+  display: none;
 }
