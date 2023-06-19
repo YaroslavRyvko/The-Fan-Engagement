@@ -30,7 +30,8 @@ nav {
     transition: color 0.25s ease; }
     nav a:hover {
       color: #fff9e0; }
-  nav li.active a {
+  nav li.active a,
+  nav li.aActive a {
     color: #fff9e0; }
 
 #hero {
@@ -107,6 +108,79 @@ nav {
     transform: translateY(-20px); }
   100% {
     transform: translateY(0px); } }
+
+#whatisit {
+  align-items: center;
+  justify-content: center; }
+
+.whatisit_slider {
+  width: 100%;
+  height: 100%; }
+
+.fp-slides {
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-out; }
+
+.fp-slidesContainer {
+  display: block;
+  height: 100%;
+  float: left;
+  position: relative; }
+
+.whatisit_slide {
+  position: relative;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100vw !important;
+  float: left; }
+
+.whatisit_slider_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff9e0;
+  width: 100%;
+  height: 100vh; }
+  .whatisit_slider_content .slider_text {
+    font-size: 1.5vw;
+    line-height: 1.2;
+    text-align: center;
+    position: absolute;
+    z-index: 200;
+    width: 25vw;
+    text-transform: uppercase; }
+  .whatisit_slider_content .foam {
+    width: 23vw;
+    position: absolute;
+    margin-top: -6vw;
+    margin-left: -8vw; }
+  .whatisit_slider_content .iphone {
+    width: 15vw;
+    position: absolute;
+    margin-right: -8vw;
+    margin-bottom: -2vw; }
+  .whatisit_slider_content .carres {
+    width: 50vw;
+    position: absolute; }
+  .whatisit_slider_content .casquette {
+    width: 50vw;
+    position: absolute; }
+  .whatisit_slider_content .slider_text_back {
+    color: #001133;
+    font-size: 13vw;
+    line-height: 1;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 6vw;
+    left: 12vw;
+    z-index: -1; }
+    .whatisit_slider_content .slider_text_back .word {
+      display: block !important; }
 
 #getresults {
   align-items: center;
@@ -290,22 +364,23 @@ nav {
   z-index: 100;
   max-width: inherit; }
 
-.light_bg_text_top, .light_bg_text_bottom {
+.light_bg_text_top,
+.light_bg_text_bottom {
   position: absolute;
   z-index: -1;
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #168DFF;
+  -webkit-text-stroke-color: #168dff;
   font-size: 12.5vw;
-  line-height: .9;
+  line-height: 0.9;
   text-transform: uppercase;
   left: 0.5vw;
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-align: justify;
-  opacity: .5; }
+  opacity: 0.5; }
 
 .light_bg_text_top {
   top: 0; }

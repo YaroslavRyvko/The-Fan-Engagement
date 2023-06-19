@@ -13,22 +13,49 @@ export function initAnimations() {
 
     const fullPageInstance = new fullpage("#fullpage", {
         licenseKey: 'gplv3-license',
-        anchors: ['01', '03', '04', '05', '06', '07', '08', '09'],
         scrollOverflow: true,
         autoScrolling: true,
         verticalCentered: false,
+        responsiveWidth: 767,
         menu: '.nav_menu',
+        anchors: ['01','02', '03', '04', '05', '06', '07', '08', '09'],
+        scrollHorizontally: true,
+        slidesNavigation: false,
         afterLoad: function(anchorLink, index) {
             history.pushState(null, null, " ");
         },
         onLeave: function(index, nextIndex, direction) {
             let section =  document.getElementById(nextIndex.item.id);
 
-            if(nextIndex.anchor == '01'){ // Hero
+            if(nextIndex.anchor == '01') { // Hero
                 let tl = gsap.timeline();
                 tl.from(".hero_title span", { duration: 2, x: 100, delay: 1, opacity: 0, ease: "expo", stagger: 0.25, }, '<-1');
                 tl.from(".hero_phone", { duration: 3, delay: 1, opacity: 0 }, '<-.5')
             }
+            else if(nextIndex.anchor == '02') { // What is it
+                let tl1 = gsap.timeline();
+                tl1.from("#whatisit h2", { duration: 2, x: 100, delay: .5, opacity: 0, ease: "expo", });
+      
+                //Slide #1
+                tl1.from(".foam", { duration: 2, x: -100, delay: .5, opacity: 0, ease: "expo", }, '<-.5');
+                tl1.from(".iphone", { duration: 2, x: 100, delay: .5, opacity: 0, ease: "expo", }, '<-.5');
+                let splitText1 = new SplitType("#whatisit_slide1 .slider_text", {type:"words,chars"});
+                let chars1 = splitText1.chars;
+                tl1.from(chars1, {duration: 0.8, opacity:0, x:-25, ease:"back", stagger: 0.01}, "-=2");
+                let splitText2 = new SplitType("#whatisit_slide1 .slider_text_back", {type:"chars"});
+                let chars2 = splitText2.chars;
+                tl1.from(chars2, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+      
+                //Slide #3 
+                let tl2 = gsap.timeline();
+                tl2.from(".casquette", { duration: 2, x: -100, delay: .5, opacity: 0, ease: "expo", }, '<-.5');
+                let splitText3 = new SplitType("#whatisit_slide3 .slider_text", {type:"words,chars"});
+                let chars3 = splitText1.chars;
+                tl2.from(chars3, {duration: 0.8, opacity:0, x:-25, ease:"back", stagger: 0.01}, "-=2");
+                let splitText4 = new SplitType("#whatisit_slide3 .slider_text_back", {type:"chars"});
+                let chars4 = splitText4.chars;
+                tl2.from(chars4, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+            }              
             else if(nextIndex.anchor == '03'){ // Get Results
                 let tl = gsap.timeline();
                 tl.from("#getresults h2", { duration: 2, x: 100, delay: .5, opacity: 0, ease: "expo", });
@@ -51,6 +78,7 @@ export function initAnimations() {
                 let splitText = new SplitType("#bringtheaction1 .movin_text_back", {type:"words,chars"});
                 let chars = splitText.chars;
                 tl.from(chars, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=6");
+                document.querySelector('[data-menuanchor="05"]').classList.remove('aActive');
             }
             else if(nextIndex.anchor == '06') { // Bring the action #2
                 let tl = gsap.timeline();
@@ -61,6 +89,7 @@ export function initAnimations() {
                 let splitText = new SplitType("#bringtheaction2 .movin_text_back", {type:"words,chars"});
                 let chars = splitText.chars;
                 tl.from(chars, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=6");
+                document.querySelector('[data-menuanchor="05"]').classList.add('aActive');
             }
             else if(nextIndex.anchor == '07') { // Bring the action #3
                 let tl = gsap.timeline();
@@ -71,6 +100,7 @@ export function initAnimations() {
                 let splitText = new SplitType("#bringtheaction3 .movin_text_back", {type:"words,chars"});
                 let chars = splitText.chars;
                 tl.from(chars, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=6");
+                document.querySelector('[data-menuanchor="05"]').classList.add('aActive');
             }
             else if(nextIndex.anchor == '08') { // Work
                 let tl = gsap.timeline();
@@ -85,8 +115,49 @@ export function initAnimations() {
                 let splitText2 = new SplitType("#work .light_bg_text_bottom", {type:"words,chars"});
                 let chars2 = splitText2.chars;
                 tl.from(chars2, {duration: 1, opacity:0, x:200, rotation:20,  ease:"back", stagger: 0.1}, "-=4");
+                document.querySelector('[data-menuanchor="05"]').classList.remove('aActive');
             }
-        }
+        },
+        onSlideLeave: function(section, origin, destination, direction) {
+
+            let slideID = destination.item.id;
+    
+            if(slideID == 'whatisit_slide1') {
+                let tl = gsap.timeline();
+                tl.from("#"+slideID+" .foam", { duration: 2, x: -100, delay: 1, opacity: 0, ease: "expo", }, '<-.5');
+                tl.from("#"+slideID+" .iphone", { duration: 2, x: 100, delay: 1, opacity: 0, ease: "expo", }, '<-.5');
+                let splitText1 = new SplitType("#"+slideID+" .slider_text", {type:"words,chars"});
+                let chars1 = splitText1.chars;
+                tl.from(chars1, {duration: 0.8, opacity:0, x:-25, ease:"back", stagger: 0.01}, "-=2");
+                let splitText2 = new SplitType("#"+slideID+" .slider_text_back", {type:"chars"});
+                let chars2 = splitText2.chars;
+                tl.from(chars2, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+    
+            } else if(slideID == 'whatisit_slide2') {
+                let tl = gsap.timeline();
+                tl.from("#"+slideID+" .carres", { duration: 2, x: -100, delay: 1, opacity: 0, ease: "expo", }, '<-.5');
+                let splitText1 = new SplitType("#"+slideID+" .slider_text", {type:"words,chars"});
+                let chars1 = splitText1.chars;
+                tl.from(chars1, {duration: 0.8, opacity:0, x:-25, ease:"back", stagger: 0.01}, "-=2");
+                let splitText2 = new SplitType("#"+slideID+" .slider_text_back", {type:"chars"});
+                let chars2 = splitText2.chars;
+                tl.from(chars2, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+    
+            } else if(slideID == 'whatisit_slide3') {
+                let tl = gsap.timeline();
+                tl.from("#"+slideID+" .casquette", { duration: 2, x: -100, delay: 1, opacity: 0, ease: "expo", }, '<-.5');
+                let splitText1 = new SplitType("#"+slideID+" .slider_text", {type:"words,chars"});
+                let chars1 = splitText1.chars;
+                tl.from(chars1, {duration: 0.8, opacity:0, x:-25, ease:"back", stagger: 0.01}, "-=2");
+                let splitText2 = new SplitType("#"+slideID+" .slider_text_back", {type:"chars"});
+                let chars2 = splitText2.chars;
+                tl.from(chars2, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+            }
+    
+          },
+          afterSlideLoad: function(section, origin, destination, direction) {
+            history.pushState(null, null, " ");
+          },
     });
 
      // Float functions
@@ -147,5 +218,5 @@ export function initAnimations() {
 
     //  Console Clear
 
-    console.clear();
+    // console.clear();
 }
