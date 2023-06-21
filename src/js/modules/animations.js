@@ -2,7 +2,7 @@ import  gsap  from "gsap";
 import SplitType from 'split-type'
 
 export function initAnimations() {
-
+    let demo = document.querySelector('.book_a_demo');
     let tl1 = gsap.timeline();
     tl1.to(".preloader", { duration: 1, delay: .5, xPercent: 100, })
        .from(".hero_title span", { duration: 2, x: 100, delay: 1, opacity: 0, ease: "expo", stagger: 0.25, }, '<-1')
@@ -18,7 +18,8 @@ export function initAnimations() {
         verticalCentered: false,
         responsiveWidth: 767,
         menu: '.nav_menu',
-        anchors: ['01','02', '03', '04', '05', '06', '07', '08', '09'],
+        anchors: ['01','02', '03', '04', '05', '06', '07', '08', '09', '10'],
+        normalScrollElements: 'footer',
         scrollHorizontally: true,
         slidesNavigation: false,
         afterLoad: function(anchorLink, index) {
@@ -31,6 +32,9 @@ export function initAnimations() {
                 let tl = gsap.timeline();
                 tl.from(".hero_title span", { duration: 2, x: 100, delay: 1, opacity: 0, ease: "expo", stagger: 0.25, }, '<-1');
                 tl.from(".hero_phone", { duration: 3, delay: 1, opacity: 0 }, '<-.5')
+
+                demo.classList.remove('hidden');
+
             }
             else if(nextIndex.anchor == '02') { // What is it
                 let tl1 = gsap.timeline();
@@ -55,11 +59,15 @@ export function initAnimations() {
                 let splitText4 = new SplitType("#whatisit_slide3 .slider_text_back", {type:"chars"});
                 let chars4 = splitText4.chars;
                 tl2.from(chars4, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+
+                demo.classList.remove('hidden');
             }              
             else if(nextIndex.anchor == '03'){ // Get Results
                 let tl = gsap.timeline();
                 tl.from("#getresults h2", { duration: 2, x: 100, delay: .5, opacity: 0, ease: "expo", });
                 tl.from("#getresults .aStats", { duration: 1, opacity: 0, scale: 1.5, stagger: 0.25 }, '<-.5');
+
+                demo.classList.remove('hidden');
             } 
             else if(nextIndex.anchor == '04') { // Why SMS
                 let tl = gsap.timeline();
@@ -68,6 +76,8 @@ export function initAnimations() {
                 let splitText = new SplitType(".whysms_text_back", {type:"chars"});
                 let chars = splitText.chars;
                 tl.from(chars, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+
+                demo.classList.remove('hidden');
             }
             else if(nextIndex.anchor == '05') { // Bring the action #1
                 let tl = gsap.timeline();
@@ -78,7 +88,9 @@ export function initAnimations() {
                 let splitText = new SplitType("#bringtheaction1 .movin_text_back", {type:"words,chars"});
                 let chars = splitText.chars;
                 tl.from(chars, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=6");
+
                 document.querySelector('[data-menuanchor="05"]').classList.remove('aActive');
+                demo.classList.remove('hidden');
             }
             else if(nextIndex.anchor == '06') { // Bring the action #2
                 let tl = gsap.timeline();
@@ -89,7 +101,9 @@ export function initAnimations() {
                 let splitText = new SplitType("#bringtheaction2 .movin_text_back", {type:"words,chars"});
                 let chars = splitText.chars;
                 tl.from(chars, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=6");
+
                 document.querySelector('[data-menuanchor="05"]').classList.add('aActive');
+                demo.classList.remove('hidden');
             }
             else if(nextIndex.anchor == '07') { // Bring the action #3
                 let tl = gsap.timeline();
@@ -100,7 +114,9 @@ export function initAnimations() {
                 let splitText = new SplitType("#bringtheaction3 .movin_text_back", {type:"words,chars"});
                 let chars = splitText.chars;
                 tl.from(chars, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=6");
+
                 document.querySelector('[data-menuanchor="05"]').classList.add('aActive');
+                demo.classList.remove('hidden');
             }
             else if(nextIndex.anchor == '08') { // Work
                 let tl = gsap.timeline();
@@ -115,7 +131,18 @@ export function initAnimations() {
                 let splitText2 = new SplitType("#work .light_bg_text_bottom", {type:"words,chars"});
                 let chars2 = splitText2.chars;
                 tl.from(chars2, {duration: 1, opacity:0, x:200, rotation:20,  ease:"back", stagger: 0.1}, "-=4");
+
                 document.querySelector('[data-menuanchor="05"]').classList.remove('aActive');
+                demo.classList.remove('hidden');
+            }
+            else if(nextIndex.anchor == '09') { // Contact
+                let tl = gsap.timeline();
+                tl.from("#contact h2", { duration: 2, x: 100, delay: .5, opacity: 0, ease: "expo" });
+                tl.from("#contact h4", { duration: 2, x: -100, opacity: 0, ease: "expo", stagger: 0.25 }, "-=2");
+                tl.from("#contact .aField", { duration: 2, x: 50, opacity: 0, ease: "expo", stagger: 0.25 }, "-=2");
+                tl.from("#contact button", { duration: 2, y: 50, opacity: 0, ease: "expo", stagger: 0.25 }, "-=2");
+
+                demo.classList.add('hidden');
             }
         },
         onSlideLeave: function(section, origin, destination, direction) {
@@ -132,6 +159,8 @@ export function initAnimations() {
                 let splitText2 = new SplitType("#"+slideID+" .slider_text_back", {type:"chars"});
                 let chars2 = splitText2.chars;
                 tl.from(chars2, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+                updatePagination(0);
+      
     
             } else if(slideID == 'whatisit_slide2') {
                 let tl = gsap.timeline();
@@ -142,6 +171,7 @@ export function initAnimations() {
                 let splitText2 = new SplitType("#"+slideID+" .slider_text_back", {type:"chars"});
                 let chars2 = splitText2.chars;
                 tl.from(chars2, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+                updatePagination(1);
     
             } else if(slideID == 'whatisit_slide3') {
                 let tl = gsap.timeline();
@@ -152,6 +182,7 @@ export function initAnimations() {
                 let splitText2 = new SplitType("#"+slideID+" .slider_text_back", {type:"chars"});
                 let chars2 = splitText2.chars;
                 tl.from(chars2, {duration: 1, opacity:0, x:-200, rotation:-20,  ease:"back", stagger: 0.1}, "-=2");
+                updatePagination(2);
             }
     
           },
@@ -216,7 +247,14 @@ export function initAnimations() {
      }
 
 
-    //  Console Clear
+     function updatePagination(num){
+        let pagination = document.querySelectorAll('.num_content');
+        pagination.forEach((e) => {
+            e.classList.remove('active')
+        })
+        pagination[num].classList.add('active');
+     }
+
 
     // console.clear();
 }
