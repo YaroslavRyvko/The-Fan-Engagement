@@ -304,9 +304,7 @@ export function initAnimations() {
         layoutChangedCallback(mql.matches);
     }
 
-    function hideBanner() {
-        document.querySelectorAll('body > div')[0].style.display = "none!important";
-    }
+    // Remove Banner
+    document.querySelector('body > div > a').parentElement.style.display = "none";
 
-    hideBanner();
 }
