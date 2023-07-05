@@ -1,0 +1,238 @@
+// Contact
+
+#contact {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 55vw auto;
+    background-position: bottom left;
+    background-image: url("../images/contact_bg.png");
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      display: block;
+      background-size: 75%;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      display: block;
+      background-size: 100%;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      display: block;
+      background-size: 170%;
+    }
+  }
+  
+  .contact_form_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -10vw;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      display: block;
+      margin-right: 0;
+      padding: 5rem 3rem;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      display: block;
+      margin-right: 0;
+      padding: 10rem 3rem;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      display: block;
+      margin-right: 0;
+      padding: 10rem 2rem 30rem 2rem;
+    }
+  }
+  
+  .contact_text {
+    width: 17vw;
+    margin-right: 5vw;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      width: 50%;
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: 5rem;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      width: 50%;
+      margin-left: 1rem;
+      margin-right: 0;
+      margin-bottom: 5rem;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 5rem;
+    }
+  
+    h4 {
+      font-size: 1.5vw;
+      line-height: 1.3;
+      color: #fff9e0;
+      margin: 0 0 1.5rem 0;
+      padding: 0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+  
+      @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+        font-size: 1.5rem;
+        margin: 0 0 1rem 0;
+      }
+  
+      @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        font-size: 2rem;
+        margin: 0 0 1.5rem 0;
+      }
+  
+      @media only screen and (max-width: 767px) {
+        font-size: 2.5rem;
+        margin: 0 0 2.5rem 0;
+      }
+  
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  
+  .contact_form {
+    width: 25vw;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      margin-left: auto;
+      width: 50%;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      padding-left: 15%;
+      width: auto;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  
+  .form_input_wrapper {
+    padding: 10px 0;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      padding: 0 0 1rem 0 !important;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      padding: 0 0 2rem 0 !important;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      padding: 0 0 2rem 0 !important;
+    }
+  }
+  
+  .form_input_wrapper input,
+  .form_input_wrapper textarea {
+    background-color: #fff9e0;
+    border-radius: 2rem;
+    border: 0;
+    color: #168dff;
+    line-height: 1.3;
+    font-size: 1rem;
+    height: auto;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: block;
+    margin: 0;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      font-size: 1rem !important;
+      padding: 1.25rem 1.5rem !important;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      font-size: 1rem !important;
+      padding: 1.5rem 2rem !important;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      font-size: 1rem !important;
+      padding: 1.5rem 2rem !important;
+    }
+  }
+  
+  .form_input_wrapper textarea {
+    height: 8vw;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      height: 8rem !important;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      height: 10rem !important;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      height: 10rem !important;
+    }
+  }
+  
+  .form_input_wrapper label {
+    display: block;
+    font-size: 1vw;
+    line-height: 1.3;
+    color: #fff9e0;
+    text-transform: uppercase;
+    margin: 0 0 4px 1.25vw;
+    font-weight: inherit;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      font-size: 1.75rem !important;
+      margin-left: 1.5rem !important;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      font-size: 1.75rem !important;
+      margin-left: 1.5rem !important;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      font-size: 1.75rem !important;
+      margin-left: 1.5rem !important;
+    }
+  }
+  
+  .form_submit {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+  
+    button {
+      margin-top: 0;
+  
+      @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+        border-radius: 2.5rem !important;
+        font-size: 1.5rem !important;
+        padding: 1rem 1.5rem !important;
+      }
+  
+      @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        border-radius: 2rem !important;
+        font-size: 2rem !important;
+        padding: 1rem 3rem !important;
+      }
+  
+      @media only screen and (max-width: 767px) {
+        border-radius: 2rem !important;
+        font-size: 2rem !important;
+        padding: 1rem 3rem !important;
+      }
+    }
+  }

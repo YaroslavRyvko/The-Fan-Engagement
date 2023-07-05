@@ -1,0 +1,123 @@
+// Work
+
+#work {
+    align-items: center;
+    justify-content: center;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      .overlay_img {
+        right: 4rem
+      }
+  
+      .overlay_text {
+        left: 4rem;
+        top: inherit;
+        bottom: 12rem;
+  
+        p {
+          width: 55vw;
+        }
+      }
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      display: block;
+  
+      .overlay_img {
+        position: relative;
+      }
+  
+      .overlay_text {
+        position: static;
+        padding: 0 2rem;
+  
+        h3 {
+          font-size: 3rem;
+          margin: 0 0 1.5rem 0;
+        }
+  
+        p {
+          width: auto;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  
+    @media only screen and (max-width: 767px) {
+      display: block;
+      overflow: hidden;
+  
+      .overlay_img {
+        position: relative;
+      }
+  
+      .overlay_text {
+        padding: 0 2rem;
+        position: static;
+  
+        h3 {
+          font-size: 3rem;
+          margin: 0 0 1.5rem 0;
+        }
+  
+        p {
+          width: auto;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  
+  .overlay_img3 {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    z-index: 100;
+    max-width: inherit;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      position: static;
+      width: 45vw;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      position: static;
+      width: 100%;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      position: static;
+      width: 100%;
+    }
+  }
+  
+  .light_bg_text_top,
+  .light_bg_text_bottom {
+    position: absolute;
+    z-index: -1;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #168dff;
+    font-size: 12.5vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+    left: 0.5vw;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: justify;
+    opacity: 0.5;
+  }
+  
+  .light_bg_text_top {
+    top: 0;
+  }
+  
+  .light_bg_text_bottom {
+    bottom: 0;
+  
+    @media only screen and (max-width: 767px) {
+      top: 72vw;
+    }
+  }

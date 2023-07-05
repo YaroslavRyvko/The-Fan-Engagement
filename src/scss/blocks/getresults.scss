@@ -1,0 +1,88 @@
+// Get Results
+
+#getresults {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      padding: 10rem 2rem 2rem 2rem;
+  
+      .fp-scrollable {
+        height: auto;
+        position: static;
+      }
+  
+      .fp-scroller {
+        transform: inherit !important;
+      }
+    }
+  
+    @media only screen and (max-width: 767px) {
+      justify-content: flex-start;
+      padding: 2rem;
+    }
+  }
+  
+  .stats-wrapper {
+    margin: auto;
+    width: 50vw;
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      width: 100%;
+      padding: 4rem 2rem;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      width: 100%;
+      padding: 4rem 2rem;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      padding: 12rem 2rem 2rem 2rem;
+    }
+  }
+  
+  .aStats1 {
+    display: block;
+    margin-left: auto;
+    padding: 2vw;
+    width: 80%;
+  }
+  
+  .aStats2 {
+    display: block;
+    margin-right: auto;
+    padding: 2vw;
+    width: 70%;
+  }
+  
+  .aStats3 {
+    display: block;
+    margin-left: auto;
+    padding: 2vw;
+    width: 95%;
+  }
+  
+  .aStats4 {
+    display: block;
+    margin-right: auto;
+    padding: 2vw;
+    width: 75%;
+  }
+  
+  .aStats1,
+  .aStats2,
+  .aStats3,
+  .aStats4 {
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  
+  .aStats {
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      width: 65%;
+    }
+  }

@@ -1,0 +1,178 @@
+// Footer
+
+#footer {
+    font-family: "Roboto", sans-serif;
+    background-image: url("../images/footer_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    padding: 1vw 2.5vw;
+    z-index: 500;
+    height: auto !important;
+    min-height: auto;
+    display: block;
+  
+    .col_left {
+      min-height: 6vw;
+      display: flex;
+      align-items: center;
+    }
+  
+    .col_center {
+      min-height: 6vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .col_right {
+      min-height: 6vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  
+    .powered {
+      font-weight: 700;
+      font-size: 1vw;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      color: #168dff;
+    }
+  
+    .copyright {
+      font-weight: 400;
+      font-size: 0.875rem;
+      margin-bottom: 0;
+      text-align: center;
+      color: #168dff;
+  
+      @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+        line-height: 1.3;
+      }
+  
+      @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        line-height: 1.3;
+      }
+  
+      @media only screen and (max-width: 767px) {
+        line-height: 1.3;
+      }
+    }
+  
+    .logo_footer {
+      width: 3vw;
+      margin-bottom: 0.5rem;
+  
+      @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+        width: 12%;
+        margin: 2rem 0;
+      }
+  
+      @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        width: 12%;
+        margin: 2rem 0;
+      }
+  
+      @media only screen and (max-width: 767px) {
+        width: 25%;
+        margin: 2rem 0;
+      }
+    }
+  
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+      min-height: inherit;
+      background-image: url('../images/footer_bg_mobile.svg');
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 2rem;
+      text-align: center;
+      width: 100vw;
+    }
+  
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      min-height: inherit;
+      width: 100vw;
+      background-image: url('../images/footer_bg_mobile.svg');
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    @media only screen and (max-width: 767px) {
+      background-image: url('../images/footer_bg_mobile.svg');
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .desktop {
+      @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+        display: none;
+      }
+  
+      @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        display: none;
+      }
+  
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  
+    .mobile {
+      display: none;
+  
+      @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+        display: block;
+      }
+  
+      @media only screen and (min-width: 767px) and (max-width: 1023px) {
+        display: block;
+      }
+  
+      @media only screen and (max-width: 767px) {
+        display: block;
+      }
+  
+      .powered {
+        @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+          font-size: 1rem;
+          display: block;
+        }
+  
+        @media only screen and (min-width: 767px) and (max-width: 1023px) {
+          font-size: 1rem;
+          display: block;
+        }
+  
+        @media only screen and (max-width: 767px) {
+          font-size: 1rem;
+          display: block;
+        }
+  
+        img {
+          @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+            display: inline;
+          }
+  
+          @media only screen and (min-width: 767px) and (max-width: 1023px) {
+            display: inline;
+          }
+  
+          @media only screen and (max-width: 767px) {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+  
