@@ -305,6 +305,9 @@ export function initAnimations() {
     }
 
     // Remove Banner
-    document.querySelector('body > div > a').parentElement.style.display = "none";
-
+    setTimeout(
+        function(){
+            document.querySelector('body > div > a').parentElement.style.display = "none";
+        }, 10
+    )
 }
