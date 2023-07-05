@@ -296,7 +296,7 @@ export function initAnimations() {
             header.classList.add('sticky');
         })
     })
-    
+
     //  Media Watcher
     function installMediaQueryWatcher(mediaQuery, layoutChangedCallback) {
         var mql = window.matchMedia(mediaQuery);
@@ -304,4 +304,9 @@ export function initAnimations() {
         layoutChangedCallback(mql.matches);
     }
 
+    function hideBanner() {
+        document.querySelectorAll('body > div')[0].style.display = "none!important";
+    }
+
+    hideBanner();
 }
